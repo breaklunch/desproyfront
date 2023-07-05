@@ -1,0 +1,175 @@
+<mat-card>
+  <h1>Agregar nuevo curso</h1>
+  <button mat-raised-button color="warn" mat-button (click)="openDialog()">Instrucciones</button>
+  <div class="row">
+    <div class="col-md-8 offset-md-2">
+      <form (ngSubmit) = "guardarCurso()">
+        <mat-form-field class="w100" appearance="fill">
+          <mat-label>Título</mat-label>
+          <input
+          [(ngModel)] = "cursoData.titulo"
+          type="text"
+          name="titulo"
+          required
+          placeholder="Digite el título"
+          matInput>
+        </mat-form-field>
+        <mat-form-field class="w100" appearance="fill">
+          <mat-label>Descripción</mat-label>
+          <textarea
+          [(ngModel)] = "cursoData.descripcion"
+          type="text"
+          name="descripcion"
+          placeholder="Digite la descripción"
+          matInput
+          rows="8"></textarea>
+        </mat-form-field>
+        <mat-form-field class="w100" appearance="fill">
+          <mat-label>Area de capacitacion</mat-label>
+          <input
+          [(ngModel)] = "cursoData.area"
+          type="text"
+          name="area"
+          placeholder="Digite el area"
+          matInput
+          >
+        </mat-form-field>
+        <mat-form-field class="w100" appearance="fill">
+          <mat-label>Dirigido a</mat-label>
+          <input
+          [(ngModel)] = "cursoData.dirigido"
+          type="text"
+          name="dirigido"
+          placeholder="Digite quien lo dirige"
+          matInput
+          >
+        </mat-form-field>
+        <mat-form-field class="w100" appearance="fill">
+          <mat-label>Nivel</mat-label>
+          <input
+          [(ngModel)] = "cursoData.nivel"
+          type="text"
+          name="nivel"
+          placeholder="Digite el nivel"
+          matInput
+          >
+        </mat-form-field>
+        <mat-form-field class="w100" appearance="fill">
+          <mat-label>Especializacion</mat-label>
+          <input
+          [(ngModel)] = "cursoData.especializacion"
+          type="text"
+          name="especializacion"
+          placeholder="Digite la especializacion"
+          matInput
+          >
+        </mat-form-field>
+        <mat-form-field class="w100" appearance="fill">
+          <mat-label>Objetivos</mat-label>
+          <input
+          [(ngModel)] = "cursoData.objetivos"
+          type="text"
+          name="objetivos"
+          placeholder="Digite los objetivos"
+          matInput
+          >
+        </mat-form-field>
+        <mat-form-field class="w100" appearance="fill">
+          <mat-label>Año</mat-label>
+          <input
+          [(ngModel)] = "cursoData.year"
+          type="text"
+          name="year"
+          placeholder="Digite el año"
+          matInput
+          >
+        </mat-form-field>
+        <mat-form-field  class="w100" appearance="fill">
+          <mat-label >Condiciones</mat-label>
+          <input
+          [(ngModel)] = "cursoData.condicion1"
+          type="text"
+          name="condicion1"
+          placeholder="Use la tecla TAB para navegar entre cada condicion a agregar"
+          matInput>
+          <input
+          [(ngModel)] = "cursoData.condicion2"
+          type="text"
+          name="condicion2"
+          placeholder="Digite la condicion 2"
+          matInput>
+          <input
+          [(ngModel)] = "cursoData.condicion3"
+          type="text"
+          name="condicion3"
+          placeholder="Digite la condicion 3"
+          matInput>
+          <input
+          [(ngModel)] = "cursoData.condicion4"
+          type="text"
+          name="condicion4"
+          placeholder="Digite la condicion 4"
+          matInput>
+        </mat-form-field>
+        <mat-form-field class="w100" appearance="fill">
+          <mat-label>Duracion</mat-label>
+          <input
+          [(ngModel)] = "cursoData.duracion"
+          type="text"
+          name="duracion"
+          placeholder="Digite la duracion"
+          matInput
+          >
+        </mat-form-field>
+        <mat-form-field class="w100" appearance="fill">
+          <mat-label>Prerequisitos</mat-label>
+          <input
+          [(ngModel)] = "cursoData.prerequisitos"
+          type="text"
+          name="prerequisitos"
+          placeholder="Digite los prerequisitos"
+          matInput
+          >
+        </mat-form-field>
+        <mat-form-field class="w100" appearance="fill">
+          <mat-label>Metodologia</mat-label>
+          <input
+          [(ngModel)] = "cursoData.metodologia"
+          type="text"
+          name="metodologia"
+          placeholder="Digite la metodologia"
+          matInput
+          >
+        </mat-form-field>
+        <mat-form-field class="w100" appearance="fill">
+          <mat-label>Participantes</mat-label>
+          <input
+          [(ngModel)] = "cursoData.participantes"
+          type="text"
+          name="participantes"
+          placeholder="Digite el numero de participantes"
+          matInput
+          >
+        </mat-form-field>
+
+        <mat-slide-toggle class="mt20" name = "activo" [(ngModel)] = "cursoData.activo" color="primary">
+          Estado de publicación
+        </mat-slide-toggle>
+
+        <mat-form-field appearance="fill" class="mt20 w100">
+          <mat-label>Categorías</mat-label>
+          <mat-select name="categoria" [(ngModel)] = "cursoData.categoria.categoriaId">
+            <mat-option *ngFor = "let c of categorias" [value] = "c.categoriaId">
+              {{ c.titulo }}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div class="container text-center">
+          <button mat-raised-button color="primary">Guardar</button>
+        </div>
+        <button mat-raised-button color="primary" onclick="window.history.back();">Volver atrás</button>
+      </form>
+    </div>
+  </div>
+</mat-card>

@@ -1,0 +1,59 @@
+
+<h1 class="mt20">Temas de {{ titulo }}</h1>
+<div class="bootstrap-wrapper">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="container text-center">
+        <button
+        mat-raised-button
+        color="primary"
+        [routerLink] = "'/admin/add-tema/'+cursoId+'/'+titulo">
+        Agregar tema
+        </button>
+      </div>
+      <br>
+      <div class="container text-center">
+        <button
+        mat-raised-button
+        color="primary"
+        [routerLink] = "'/admin/cursos'">
+        Volver a cursos
+        </button>
+      </div>
+      <mat-card *ngFor = "let p of temas; let i = index" class="mt20">
+        <mat-card-content>
+          <p><b> {{ p.nombre }}</b></p>
+          <p>Modalidad:<b> {{ p.modalidad }}</b></p>
+
+          <p> <mat-icon mat-list-icon>category</mat-icon>
+             <b><span class="ml20" [innerHTML] = "p.contenido"></span></b>
+          </p>
+          <div class="container-fluid">Descripcion:
+            <div class="row">
+              <div class="col-md-6">
+                <p><b> {{ p.subtema1 }}</b></p>
+              </div>
+              <div class="col-md-6">
+                <p><b> {{ p.subtema2 }}</b></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <p><b> {{ p.subtema3 }}</b></p>
+              </div>
+              <div class="col-md-6">
+                <p><b> {{ p.subtema4 }}</b></p>
+              </div>
+            </div>
+            <mat-divider></mat-divider>
+          </div>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button (click) = "eliminarTema(p.temaId)" color="warn">Eliminar</button>
+          <button mat-button [routerLink] = "'/admin/tema/'+p.temaId" color="primary">Actualizar</button>
+          
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

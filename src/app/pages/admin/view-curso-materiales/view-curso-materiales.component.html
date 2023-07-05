@@ -1,0 +1,141 @@
+
+<h1 class="mt20">Materiales de {{ titulo }}</h1>
+<div class="bootstrap-wrapper">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="container text-center">
+        <button
+        mat-raised-button
+        color="primary"
+        [routerLink] = "'/admin/add-materiales/'+cursoId+'/'+titulo">
+        Agregar materiales
+        </button>
+      </div>
+      <br>
+      <div class="container text-center">
+        <button
+        mat-raised-button
+        color="primary"
+        [routerLink] = "'/admin/cursos'">
+        Volver a cursos
+        </button>
+      </div>
+      <mat-card *ngFor = "let m of materiales; let i = index" class="mt20">
+
+        <mat-card-content>
+          <p><b> Medios aportados por tecsup</b></p>
+
+          <div class="container-fluid">Equipos e instrumentos:
+            <div class="row">
+              <div class="col-md-6">
+                <p><b> {{ m.equipos1 }}</b></p>
+              </div>
+              <div class="col-md-6">
+                <p><b> {{ m.equipos2 }}</b></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <p><b> {{ m.equipos3 }}</b></p>
+              </div>
+              <div class="col-md-6">
+                <p><b> {{ m.equipos4 }}</b></p>
+             </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <p><b> {{ m.equipos5 }}</b></p>
+              </div>
+              <div class="col-md-6">
+                <p><b> {{ m.equipos6 }}</b></p>
+             </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <p><b> {{ m.equipos7 }}</b></p>
+              </div>
+              <div class="col-md-6">
+                <p><b> {{ m.equipos8 }}</b></p>
+             </div>
+            </div>
+          </div>
+
+
+          <div class="container-fluid">Materiales e insumos:
+            <div class="row">
+              <div class="col-md-6">
+                <p><b> {{ m.materiales1 }}</b></p>
+              </div>
+              <div class="col-md-6">
+                <p><b> {{ m.materiales2 }}</b></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <p><b> {{ m.materiales3 }}</b></p>
+              </div>
+              <div class="col-md-6">
+                <p><b> {{ m.materiales4 }}</b></p>
+             </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <p><b> {{m.materiales5 }}</b></p>
+              </div>
+              <div class="col-md-6">
+                <p><b> {{ m.materiales6 }}</b></p>
+             </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <p><b> {{ m.materiales7 }}</b></p>
+              </div>
+              <div class="col-md-6">
+                <p><b> {{ m.materiales8 }}</b></p>
+             </div>
+            </div>
+          </div>
+
+          <p><b> Medios aportados por la empresa</b></p>
+          <div class="container-fluid">Servicios y suministros:
+            <div class="row">
+              <div class="col-md-6">
+                <p><b> {{ m.servicio1 }}</b></p>
+              </div>
+              <div class="col-md-6">
+                <p><b> {{ m.servicio2 }}</b></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="container-fluid">Infraestructura y equipamiento:
+            <div class="row">
+              <div class="col-md-6">
+                <p><b> {{ m.infraestructura1 }}</b></p>
+              </div>
+              <div class="col-md-6">
+                <p><b> {{ m.infraestructura2 }}</b></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <p><b> {{ m.infraestructura3 }}</b></p>
+              </div>
+              <div class="col-md-6">
+                <p><b> {{ m.infraestructura4 }}</b></p>
+              </div>
+            </div>
+
+          </div>
+        </mat-card-content>
+
+        <mat-card-actions>
+          <button mat-button (click) = "eliminarMateriales(m.materialId)" color="warn">Eliminar</button>
+          <button mat-button [routerLink] = "'/admin/material/'+m.materialId" color="primary">Actualizar</button>
+          
+        </mat-card-actions>
+
+      </mat-card>
+    </div>
+  </div>
+</div>

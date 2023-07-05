@@ -1,0 +1,57 @@
+<div class="container text-center mt20">
+  <button routerLink="/admin/add-curso" mat-raised-button color="primary">Agregar curso</button>
+</div>
+<mat-card class="mt10" *ngFor = "let e of cursos">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>
+        {{ e.titulo }}
+      </mat-card-title>
+      <mat-card-subtitle><div mat-line><b>Area de capacitacion:</b>  {{ e.area }}</div></mat-card-subtitle>
+
+      <mat-card-subtitle><div mat-line><b>Dirigido a:</b> {{ e.dirigido }}</div></mat-card-subtitle>
+
+      <mat-card-subtitle><div mat-line><b>Nivel:</b> {{ e.nivel }}</div></mat-card-subtitle>
+
+      <mat-card-subtitle><div mat-line><b>Especializacion:</b> {{ e.especializacion }}</div></mat-card-subtitle>
+
+      <mat-card-subtitle><div  mat-line><b>Objetivo:</b>  {{ e.objetivos }}</div></mat-card-subtitle>
+
+      <mat-card-subtitle><div mat-line><b>Metodologia:</b> {{ e.metodologia }}</div></mat-card-subtitle>
+
+      <mat-card-subtitle><div mat-line><b>Num. de Participantes:</b> {{ e.participantes }}</div></mat-card-subtitle>
+
+      <mat-card-subtitle><div mat-line><b>Duracion:</b> {{ e.duracion }}</div></mat-card-subtitle>
+
+      <mat-card-subtitle><div mat-line><b>Descripcion:</b> {{ e.descripcion }}</div></mat-card-subtitle>
+
+      <mat-card-title>
+        <h3><b>Al finalizar el curso, el participante estará en condiciones de:</b></h3>
+        <mat-card-subtitle><div mat-line>-{{ e.condicion1 }}</div></mat-card-subtitle>
+        <mat-card-subtitle><div mat-line>-{{ e.condicion2 }}</div></mat-card-subtitle>
+        <mat-card-subtitle><div mat-line>-{{ e.condicion3 }}</div></mat-card-subtitle>
+        <mat-card-subtitle><div mat-line>-{{ e.condicion4 }}</div></mat-card-subtitle>
+      </mat-card-title>
+
+      <mat-card-subtitle><div mat-line><b>Prerequisitos:</b> {{ e.prerequisitos }}</div></mat-card-subtitle>
+      <mat-card-subtitle><div mat-line><b>Categoria:</b> {{ e.categoria.titulo }}</div></mat-card-subtitle>
+      <mat-card-subtitle><div mat-line><b>Fecha de elaboracion:</b> {{ e.year }}</div></mat-card-subtitle>
+
+  </mat-card-header>
+  <mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="primary" [routerLink] = "'/admin/ver-temas/'+e.cursoId+'/'+e.titulo">Temas</button>
+      <button [routerLink] = "'/admin/descriptor/'+e.cursoId+'/'+e.titulo" mat-flat-button color="primary" class="ml20">Descriptor</button>
+      <button [routerLink] = "'/admin/curso/'+e.cursoId" mat-flat-button color="primary" class="ml20">Actualizar</button>
+      <button mat-flat-button color="warn" class="ml10" (click) = "eliminarCurso(e.cursoId)">Eliminar</button>
+    </mat-card-actions>
+  </mat-card-content>
+  <mat-card-content>
+    <mat-card-actions>
+      <button mat-flat-button color="primary" [routerLink] = "'/admin/ver-materiales/'+e.cursoId+'/'+e.titulo" class="ml20">Materiales</button>
+      <button mat-button color="primary"  [routerLink] = "'/admin/evaluacion/'+e.cursoId+'/'+e.titulo" class="ml20">Sistema de Evaluacion</button>
+    </mat-card-actions>
+  </mat-card-content>
+</mat-card>
+
+

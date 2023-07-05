@@ -1,0 +1,280 @@
+<div class="bootstrap-wrapper">
+  <div class="row mt20">
+    <div class="col-md-12">
+      <h1>Actualizar materiales de <span style="font-weight: bold;">{{ material.curso.titulo }}</span></h1>
+      <mat-card>
+        <mat-card-header>
+          <mat-card-subtitle>
+            Digite los detalles del material
+          </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <form class="mt20" *ngIf = "material" (ngSubmit) = "actualizarDatosDelMaterial()">
+
+            <mat-card-subtitle>
+              <b>Equipos e instrumentos:</b>
+            </mat-card-subtitle>
+
+            <div class="row">
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Equipos e instrumentos 1</mat-label>
+                  <input
+                  type="text"
+                  matInput
+                  name="equipos1"
+                  [(ngModel)] = "material.equipos1">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Equipos e instrumentos 2</mat-label>
+                  <input
+                  type="text"
+                  matInput
+                  name="equipos2"
+                  [(ngModel)] = "material.equipos2">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Equipos e instrumentos 3</mat-label>
+                  <input
+                  type="text"
+                  matInput
+                  name="equipos3"
+                  [(ngModel)] = "material.equipos3">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Equipos e instrumentos 4</mat-label>
+                  <input
+                  type="text"
+                  matInput
+                  name="equipos4"
+                  [(ngModel)] = "material.equipos4">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Equipos e instrumentos 5</mat-label>
+                  <input
+                  type="text"
+                  matInput
+                  name="equipos5"
+                  [(ngModel)] = "material.equipos5">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Equipos e instrumentos 6</mat-label>
+                  <input
+                  type="text"
+                  matInput
+                  name="equipos6"
+                  [(ngModel)] = "material.equipos6">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Equipos e instrumentos 7</mat-label>
+                  <input
+                  type="text"
+                  matInput
+                  name="equipos7"
+                  [(ngModel)] = "material.equipos7">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>MEquipos e instrumentos 8</mat-label>
+                  <input
+                  type="text"
+                  matInput
+                  name="equipos8"
+                  [(ngModel)] = "material.equipos8">
+                </mat-form-field>
+              </div>
+            </div>
+
+            <mat-card-subtitle>
+              <b>Materiales e insumos:</b>
+            </mat-card-subtitle>
+
+            <div class="row">
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Materiales e insumos 1</mat-label>
+                  <input
+                  type="text"
+                  matInput
+                  name="insumos1"
+                  [(ngModel)] = "material.materiales1">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Materiales e insumos 2</mat-label>
+                  <input
+                  type="text"
+                  matInput
+                  name="insumos2"
+                  [(ngModel)] = "material.materiales2">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Materiales e insumos 3</mat-label>
+                  <input
+                  type="text"
+                  matInput
+                  name="insumos3"
+                  [(ngModel)] = "material.materiales3">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Materiales e insumos 4</mat-label>
+                  <input
+                  type="text"
+                  matInput
+                  name="insumos4"
+                  [(ngModel)] = "material.materiales4">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Materiales e insumos 5</mat-label>
+                  <input
+                  type="text"
+                  matInput
+                  name="insumos5"
+                  [(ngModel)] = "material.materiales5">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Materiales e insumos 6</mat-label>
+                  <input
+                  type="text"
+                  matInput
+                  name="insumos6"
+                  [(ngModel)] = "material.materiales6">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Materiales e insumos 7</mat-label>
+                  <input
+                  type="text"
+                  matInput
+                  name="insumos7"
+                  [(ngModel)] = "material.materiales7">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Materiales e insumos 8</mat-label>
+                  <input
+                  type="text"
+                  matInput
+                  name="insumos8"
+                  [(ngModel)] = "material.materiales8">
+                </mat-form-field>
+              </div>
+            </div>
+
+            <mat-card-header>
+              <mat-card-subtitle>
+                <b>Medios aportados por la empresa</b>
+              </mat-card-subtitle>
+            </mat-card-header>
+
+            <mat-card-subtitle>
+             <b>Servicios y Suministros:</b>
+            </mat-card-subtitle>
+
+            <div class="row">
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Digite Servicios y suministros 1</mat-label>
+                  <input
+                  type="text"
+                  matInput
+                  name="servicios1"
+                  [(ngModel)] = "material.servicio1">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Digite Servicios y suministros 2</mat-label>
+                  <input
+                  type="text"
+                  matInput
+                  name="servicios2"
+                  [(ngModel)] = "material.servicio2">
+                </mat-form-field>
+              </div>
+
+              </div>
+
+
+                <mat-card-subtitle>
+                  <b>Infraestructura y equipamiento:</b>
+                </mat-card-subtitle>
+
+
+              <div class="row">
+                <div class="col-md-6">
+                  <mat-form-field class="w100">
+                    <mat-label>Digite la infraestructura y equipamiento 1</mat-label>
+                    <input
+                    type="text"
+                    matInput
+                    name="infraestructura1"
+                    [(ngModel)] = "material.infraestructura1">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                  <mat-form-field class="w100">
+                    <mat-label>Digite la infraestructura y equipamiento 2</mat-label>
+                    <input
+                    type="text"
+                    matInput
+                    name="infraestructura2"
+                    [(ngModel)] = "material.infraestructura2">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                  <mat-form-field class="w100">
+                    <mat-label>Digite la infraestructura y equipamiento 3</mat-label>
+                    <input
+                    type="text"
+                    matInput
+                    name="infraestructura3"
+                    [(ngModel)] = "material.infraestructura3">
+                  </mat-form-field>
+                </div>
+                <div class="col-md-6">
+                  <mat-form-field class="w100">
+                    <mat-label>Digite la infraestructura y equipamiento 4</mat-label>
+                    <input
+                    type="text"
+                    matInput
+                    name="infraestructura4"
+                    [(ngModel)] = "material.infraestructura4">
+                  </mat-form-field>
+                </div>
+              </div>
+
+            <div class="container text-center">
+              <button mat-raised-button color="primary">Actualizar</button>
+            </div>
+            <button mat-raised-button color="primary" onclick="window.history.back();">Volver atrás</button>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

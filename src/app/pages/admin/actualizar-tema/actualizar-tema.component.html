@@ -1,0 +1,93 @@
+<div class="bootstrap-wrapper">
+  <div class="row mt20">
+    <div class="col-md-12">
+      <h1>Actualizar temas a <span style="font-weight: bold;">{{ tema.curso.titulo }}</span></h1>
+      <mat-card>
+        <mat-card-header>
+          <mat-card-subtitle>
+            Digite los detalles del tema
+          </mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <form class="mt20" *ngIf = "tema" (ngSubmit) = "actualizarDatosDelTema()">
+
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label>Nombre</mat-label>
+              <input
+              required
+              autofocus
+              type="text"
+              name="titulo"
+              matInput
+              placeholder="Digite el título de la categoría"
+              [(ngModel)] = "tema.nombre">
+            </mat-form-field>
+            <mat-form-field class="w100" appearance="outline">
+              <mat-label>Modalidad</mat-label>
+              <input
+              required
+              autofocus
+              type="text"
+              name="titulo"
+              matInput
+              placeholder="Digite el título de la categoría"
+              [(ngModel)] = "tema.modalidad">
+            </mat-form-field>
+            <mat-form-field class="w100">
+              <mat-label>Escriba el contenido del tema</mat-label>
+              <textarea rows="8" matInput placeholder="Escribe aquí" name="contenido" [(ngModel)] = "tema.contenido"></textarea>
+            </mat-form-field>
+            <div class="row">
+
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Digite el subtema 1</mat-label>
+                  <input
+                  type="text"
+                  matInput
+                  name="subtema1"
+                  [(ngModel)] = "tema.subtema1">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Digite el subtema 2</mat-label>
+                  <input
+                  type="text"
+                  matInput
+                  name="subtema2"
+                  [(ngModel)] = "tema.subtema2">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Digite el subtema 3</mat-label>
+                  <input
+                  type="text"
+                  matInput
+                  name="subtema3"
+                  [(ngModel)] = "tema.subtema3">
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <mat-form-field class="w100">
+                  <mat-label>Digite el subtema 4</mat-label>
+                  <input
+                  type="text"
+                  matInput
+                  name="subtema4"
+                  [(ngModel)] = "tema.subtema4">
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="container text-center">
+              <button mat-raised-button color="primary">Actualizar</button>
+            </div>
+            <button mat-raised-button color="primary" onclick="window.history.back();">Volver atrás</button>
+          </form>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

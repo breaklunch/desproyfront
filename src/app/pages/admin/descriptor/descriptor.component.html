@@ -1,0 +1,183 @@
+<button mat-raised-button color="warn" mat-button (click)="openDialog()">Instrucciones</button>
+<button mat-raised-button color="primary" onclick="window.history.back();">Volver atrás</button>
+<mat-card id="htmlData" class="mt20" *ngFor = "let e of cursos">
+<img src="../../../../assets/tecsup.png" alt="">
+ <mat-card-header >
+
+   <div mat-card-avatar class="example-header-image"></div>
+     <mat-card-title>
+       {{ e.titulo }}
+     </mat-card-title>
+     <mat-card-subtitle><div mat-line><b>Area de capacitacion:</b>  {{ e.area }}</div></mat-card-subtitle>
+
+     <mat-card-subtitle><div mat-line><b>Dirigido a:</b> {{ e.dirigido }}</div></mat-card-subtitle>
+
+     <mat-card-subtitle><div mat-line><b>Nivel:</b> {{ e.nivel }}</div></mat-card-subtitle>
+
+     <mat-card-subtitle><div mat-line><b>Especializacion:</b> {{ e.especializacion }}</div></mat-card-subtitle>
+
+     <mat-card-subtitle><div  mat-line><b>Objetivo:</b>  {{ e.objetivos }}</div></mat-card-subtitle>
+
+     <mat-card-subtitle><div mat-line><b>Metodologia:</b> {{ e.metodologia }}</div></mat-card-subtitle>
+
+     <mat-card-subtitle><div mat-line><b>Num. de Participantes:</b> {{ e.participantes }}</div></mat-card-subtitle>
+
+     <mat-card-subtitle><div mat-line><b>Duracion:</b> {{ e.duracion }}</div></mat-card-subtitle>
+
+     <mat-card-subtitle><div mat-line><b>Descripcion:</b> {{ e.descripcion }}</div></mat-card-subtitle>
+
+     <mat-card-title >
+       <h3><b>Al finalizar el curso, el participante estará en condiciones de:</b></h3>
+       <mat-card-subtitle><div mat-line>-{{ e.condicion1 }}</div></mat-card-subtitle>
+       <mat-card-subtitle><div mat-line>-{{ e.condicion2 }}</div></mat-card-subtitle>
+       <mat-card-subtitle><div mat-line>-{{ e.condicion3 }}</div></mat-card-subtitle>
+       <mat-card-subtitle><div mat-line>-{{ e.condicion4 }}</div></mat-card-subtitle>
+     </mat-card-title>
+
+     <mat-card-subtitle><div mat-line><b>Prerequisitos:</b> {{ e.prerequisitos }}</div></mat-card-subtitle>
+     <mat-card-subtitle><div mat-line><b>Categoria:</b> {{ e.categoria.titulo }}</div></mat-card-subtitle>
+     <mat-card-subtitle><div mat-line><b>Fecha de elaboracion:</b> {{ e.year }}</div></mat-card-subtitle>
+ </mat-card-header>
+ <h1 class="mt20">Temas</h1>
+ <mat-card-content *ngFor = "let p of temas; let i = index">
+   <p><b> {{ p.nombre }}</b></p>
+   <p>Modalidad:<b> {{ p.modalidad }}</b></p>
+   <p> <mat-icon mat-list-icon>category</mat-icon>
+      <b><span class="ml20" [innerHTML] = "p.contenido"></span></b>
+   </p>
+   <div class="container-fluid">Descripcion de subtemas:
+     <div class="row">
+       <div class="col-md-6">
+         <p><b> -{{ p.subtema1 }}</b></p>
+       </div>
+       <div class="col-md-6">
+         <p><b> -{{ p.subtema2 }}</b></p>
+       </div>
+     </div>
+     <div class="row">
+       <div class="col-md-6">
+         <p><b> -{{ p.subtema3 }}</b></p>
+       </div>
+       <div class="col-md-6">
+         <p><b> -{{ p.subtema4 }}</b></p>
+       </div>
+     </div>
+     <mat-divider></mat-divider>
+   </div>
+ </mat-card-content>
+
+ <mat-card *ngFor = "let m of materiales; let i = index" class="mt20">
+  <mat-card-content>
+    <p><b> Medios aportados por tecsup</b></p>
+
+    <div class="container-fluid">Equipos e instrumentos:
+      <div class="row">
+        <div class="col-md-6">
+          <p><b> {{ m.equipos1 }}</b></p>
+        </div>
+        <div class="col-md-6">
+          <p><b> {{ m.equipos2 }}</b></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p><b> {{ m.equipos3 }}</b></p>
+        </div>
+        <div class="col-md-6">
+          <p><b> {{ m.equipos4 }}</b></p>
+       </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p><b> {{ m.equipos5 }}</b></p>
+        </div>
+        <div class="col-md-6">
+          <p><b> {{ m.equipos6 }}</b></p>
+       </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p><b> {{ m.equipos7 }}</b></p>
+        </div>
+        <div class="col-md-6">
+          <p><b> {{ m.equipos8 }}</b></p>
+       </div>
+      </div>
+    </div>
+
+
+    <div class="container-fluid">Materiales e insumos:
+      <div class="row">
+        <div class="col-md-6">
+          <p><b> {{ m.materiales1 }}</b></p>
+        </div>
+        <div class="col-md-6">
+          <p><b> {{ m.materiales2 }}</b></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p><b> {{ m.materiales3 }}</b></p>
+        </div>
+        <div class="col-md-6">
+          <p><b> {{ m.materiales4 }}</b></p>
+       </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p><b> {{m.materiales5 }}</b></p>
+        </div>
+        <div class="col-md-6">
+          <p><b> {{ m.materiales6 }}</b></p>
+       </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p><b> {{ m.materiales7 }}</b></p>
+        </div>
+        <div class="col-md-6">
+          <p><b> {{ m.materiales8 }}</b></p>
+       </div>
+      </div>
+    </div>
+
+    <p><b> Medios aportados por la empresa</b></p>
+    <div class="container-fluid">Servicios y suministros:
+      <div class="row">
+        <div class="col-md-6">
+          <p><b> {{ m.servicio1 }}</b></p>
+        </div>
+        <div class="col-md-6">
+          <p><b> {{ m.servicio2 }}</b></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">Infraestructura y equipamiento:
+      <div class="row">
+        <div class="col-md-6">
+          <p><b> {{ m.infraestructura1 }}</b></p>
+        </div>
+        <div class="col-md-6">
+          <p><b> {{ m.infraestructura2 }}</b></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <p><b> {{ m.infraestructura3 }}</b></p>
+        </div>
+        <div class="col-md-6">
+          <p><b> {{ m.infraestructura4 }}</b></p>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-card-actions>  <button mat-raised-button color="warn" (click)="downloadPDF()">Download PDF</button>
+  <button mat-raised-button color="primary" (click)="exportAsXLSX()">Exportar XLSX</button>
+</mat-card-actions>
+
+
+
+
